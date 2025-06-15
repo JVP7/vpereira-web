@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { NTR } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ntr = NTR({
+  weight: "400",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-ntr",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ntr.variable} antialiased bg-white transition-colors dark:bg-gray-900 dark:text-slate-300`}
       >
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          <main className="min-h-screen pt-24">{children}</main>
+          <footer> Footer </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
