@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-medium transition-colors ${
+                  className={`font-medium transition-colors hover:text-primary ${
                     isActive
                       ? "text-[#CCDCF6]"
                       : "text-black dark:text-[#CCDCF6] hover:text-[#CCDCF6]"
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <div key={index} onClick={toggleMobileMenu}>
                   <Link
                     href={item.href}
-                    className="block py-2 text-black dark:text-[#CCDCF6] hover:text-[#CCDCF6] transition-colors"
+                    className="block py-2 text-black dark:text-[#CCDCF6] hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
                   >
                     {item.label}
                   </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
               <div>
                 <button
                   onClick={toggleTheme}
-                  className="flex items-center py-2 hover: text-primary transition-colors"
+                  className="flex items-center py-2 hover: text-primary transition-colors cursor-pointer"
                 >
                   {theme === "dark" ? (
                     <>

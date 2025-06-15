@@ -1,16 +1,16 @@
+"use client";
+
 import { blogs } from "@/contents/blogs";
-import React from "react";
 import Link from "next/link";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
 const Blogs = () => {
   return (
-    <div className="container max-w-7xl mx-auto py-20">
-      <h1 className="text-4xl font-bold mb-4 text-center">Blog Posts</h1>
-      <p className="text-lg text-[#8892b0] mb-20 text-center">
-        I use this space to share my journey, insights, and reflections on what
-        I’m learning and exploring along the way.
-      </p>
+    <section className="py-20 container max-w-7xl mx-auto px-4">
+      <h2 className="flex items-center text-[32px] md:text-[50px] text-black dark:text-[#CCDCF6] font-bold mb-12">
+        <span className="whitespace-nowrap pr-4">/latest blogs</span>
+        <span className="hidden md:inline-block h-[1px] w-[35%] bg-[#233554] opacity-50"></span>
+      </h2>
       <div className="grid gird-cols-1 md:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <article
@@ -38,7 +38,15 @@ const Blogs = () => {
           </article>
         ))}
       </div>
-    </div>
+      <div className="text-center mt-12">
+        <Link
+          href="/blogs"
+          className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+        >
+          View All
+        </Link>
+      </div>
+    </section>
   );
 };
 

@@ -1,44 +1,70 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import { motion } from "framer-motion";
+import { scaleIn } from "@/utils/animations";
+import { fadeInUp } from "@/utils/animations";
 
 const Hero = () => {
   return (
     <section className="py-28 container max-w-7xl mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
-        <div className="flex flex-col items-center justify-center text-center mb-4">
+        <motion.div
+          {...scaleIn}
+          transition={{ delay: 0.02 }}
+          className="flex flex-col items-center justify-center text-center mb-4"
+        >
           <Image
-            src="/geoM2.gif"
+            src="/GeoM2.gif"
             alt="profile image"
             width={300}
             height={300}
+            unoptimized
             className="dark:invert-0 invert mb-4"
           />
-        </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-3">
-          hi, <span className="text-primary">john</span> here.
-        </h1>
+        </motion.div>
 
-        <p className="text-[24px] font-medium text-slate-400 text-center">
+        <motion.h1
+          {...fadeInUp}
+          transition={{ delay: 0.3 }}
+          className="text-5xl md:text-7xl font-extrabold mb-3"
+        >
+          hi, <span className="text-primary">john</span> here.
+        </motion.h1>
+
+        <motion.p
+          {...fadeInUp}
+          transition={{ delay: 0.5 }}
+          className="text-[24px] font-medium text-slate-400 text-center"
+        >
           I like the thrill of building.
-        </p>
-        <p className="text-[18px] text-[#8892B0] mt-1 mb-4 max-w-xl mx-auto">
+        </motion.p>
+        <motion.p
+          {...fadeInUp}
+          transition={{ delay: 0.5 }}
+          className="text-[18px] text-[#8892B0] mt-1 mb-4 max-w-xl mx-auto"
+        >
           I’m passionate about building intelligent, scalable tools that bridge
           data and people. Currently focused on software development and machine
           learning, I’m learning by building, and building with purpose.
-        </p>
+        </motion.p>
 
         <div className="flex justify-center space-x-4 mb-8">
           <Link
-            href="/"
+            href="https://github.com/JVP7"
+            target="_blank"
             className="text 3xl text-grey-600 hover:text-primary 
             dark:text-gray-300 transition-colors duration-300"
           >
             <FaGithub className="w-7 h-7" />
           </Link>
           <Link
-            href="/"
+            href="https://www.linkedin.com/in/john-v-pereira/"
+            target="_blank"
             className="text 3xl text-grey-600 hover:text-primary 
             dark:text-gray-300 transition-colors duration-300"
           >
