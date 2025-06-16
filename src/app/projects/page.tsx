@@ -1,22 +1,52 @@
-import { projects } from "@/contents/project";
+/* src/app/components/Projects.tsx */
+"use client";
+
+import { projects } from "@/contents/project"; // ← same data path
 import Image from "next/image";
-import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const Projects = () => {
-  return (
-    <div className="cointainer max-w-7xl mx-auto py-20">
-      <h1 className="text-4xl font-bold mb-4 text-center">My Projects</h1>
-      <p className="text-lg text-[#8892b0] mb-24 text-center">
-        Here are some recent projects I’ve been working on. Feel free to explore
-        the code or live demo when available.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <article
-            key={project.title}
-            className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6"
-          >
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations";
+
+const Projects = () => (
+  <div className="container max-w-7xl mx-auto py-20">
+    {/* heading */}
+    <motion.h1
+      variants={fadeInUp}
+      initial="initial"
+      animate="animate"
+      className="text-4xl font-bold mb-4 text-center"
+    >
+      My Projects
+    </motion.h1>
+
+    <motion.p
+      variants={fadeInUp}
+      initial="initial"
+      animate="animate"
+      className="text-lg text-[#8892b0] mb-24 text-center"
+    >
+      Here are some recent projects I’ve been working on. Feel free to explore
+      the code or live demo when available.
+    </motion.p>
+
+    {/* grid */}
+    <motion.div
+      className="grid grid-cols-1 md:grid-cols-3 gap-8"
+      variants={staggerContainer}
+      initial="initial"
+      animate="animate"
+    >
+      {projects.map((project) => (
+        <motion.div
+          key={project.title}
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+          {...cardHoverSmall}
+        >
+          <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6">
+            {/* thumbnail */}
             <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
               <Image
                 src={project.image}
@@ -27,42 +57,77 @@ const Projects = () => {
               />
             </div>
 
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-[#8892b0] dark:text-[#8892b0] mb-4">
+            {/* title */}
+            <motion.h3
+              className="text-xl font-semibold mb-2"
+              whileHover={{ x: 5 }}
+            >
+              {project.title}
+            </motion.h3>
+
+            {/* description */}
+            <motion.p
+              className="text-[#8892b0] dark:text-[#8892b0] mb-4"
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+            >
               {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            </motion.p>
+
+            {/* tech chips */}
+            <motion.div
+              className="flex flex-wrap gap-2 mb-4"
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+            >
               {project.technologies.map((tech) => (
-                <span
+                <motion.span
                   key={tech}
                   className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {tech}
-                </span>
+                </motion.span>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4 mt-2">
-              <Link
+            {/* links */}
+            <motion.div
+              className="flex gap-4 mt-2"
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.a
                 href={project.githubLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                whileHover={{ x: 5 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FaGithub className="w-6 h-6" />
-              </Link>
-              <Link
-                href={project.githubLink}
+              </motion.a>
+
+              <motion.a
+                href={project.demoLink}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                whileHover={{ x: 5 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FaExternalLinkAlt className="w-5 h-5" />
-              </Link>
-            </div>
+              </motion.a>
+            </motion.div>
           </article>
-        ))}
-      </div>
-    </div>
-  );
-};
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+);
 
 export default Projects;
