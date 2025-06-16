@@ -1,45 +1,100 @@
+/* src/app/components/Blogs.tsx */
+"use client";
+
 import { blogs } from "@/contents/blogs";
-import React from "react";
 import Link from "next/link";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
 
-const Blogs = () => {
-  return (
-    <div className="container max-w-7xl mx-auto py-20">
-      <h1 className="text-4xl font-bold mb-4 text-center">Blog Posts</h1>
-      <p className="text-lg text-[#8892b0] mb-20 text-center">
-        I use this space to share my journey, insights, and reflections on what
-        I’m learning and exploring along the way.
-      </p>
-      <div className="grid gird-cols-1 md:grid-cols-3 gap-8">
-        {blogs.map((blog) => (
-          <article
-            key={blog.slug}
-            className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6"
-          >
+import { motion } from "framer-motion";
+import {
+  fadeInUp,
+  fadeInDown,
+  fadeIn,
+  staggerContainer,
+  cardHoverSmall,
+} from "@/utils/animations";
+
+const Blogs = () => (
+  <div className="container max-w-7xl mx-auto py-20">
+    {/* page heading */}
+    <motion.h1
+      variants={fadeInDown}
+      initial="initial"
+      animate="animate"
+      className="text-4xl font-bold mb-4 text-center"
+    >
+      Blog Posts
+    </motion.h1>
+
+    <motion.p
+      variants={fadeIn}
+      initial="initial"
+      animate="animate"
+      className="text-lg text-[#8892b0] mb-20 text-center"
+    >
+      I use this space to share my journey, insights, and reflections on what
+      I’m learning and exploring along the way.
+    </motion.p>
+
+    {/* cards grid */}
+    <motion.div
+      className="grid gird-cols-1 md:grid-cols-3 gap-8"
+      variants={staggerContainer}
+      initial="initial"
+      animate="animate"
+    >
+      {blogs.map((blog) => (
+        <motion.div
+          key={blog.slug}
+          variants={fadeInUp}
+          initial="initial"
+          animate="animate"
+          {...cardHoverSmall}
+        >
+          <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6">
             <Link href={`/blogs/${blog.slug}`}>
-              <h3 className="text-xl font-semibold mb-2 hover:text-primary transition-colors">
+              <motion.h3
+                className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
+                whileHover={{
+                  x: 5,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+              >
                 {blog.title}
-              </h3>
+              </motion.h3>
             </Link>
-            <p className="text-[#8892b0] dark:text-[#8892b0] mb-4">
+
+            <motion.p
+              className="text-[#8892b0] dark:text-[#8892b0] mb-4"
+              variants={fadeInUp}
+            >
               {blog.excerpt}
-            </p>
-            <div className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4">
-              <span className="item-center">
+            </motion.p>
+
+            <motion.div
+              className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4"
+              variants={fadeInUp}
+            >
+              <motion.span
+                className="flex items-center"
+                whileHover={{ scale: 1.05 }}
+              >
                 <FaCalendarAlt className="mr-2" />
                 {new Date(blog.date).toLocaleDateString()}
-              </span>
-              <span className="item-center">
+              </motion.span>
+              <motion.span
+                className="flex items-center"
+                whileHover={{ scale: 1.05 }}
+              >
                 <FaClock className="mr-2" />
                 {blog.readTime}
-              </span>
-            </div>
+              </motion.span>
+            </motion.div>
           </article>
-        ))}
-      </div>
-    </div>
-  );
-};
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+);
 
 export default Blogs;
