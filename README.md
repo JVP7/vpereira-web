@@ -3,7 +3,7 @@
 Welcome to my personal portfolio — a place where I share my work, thoughts, and journey in building software, exploring AI/ML, and solving real-world problems with code.
 
 <div align="center">
-  <img src="public/chessicon.png" alt="vpereira logo" width="100" />
+  <img src="public/favicon.ico" alt="vpereira logo" width="100" />
 </div>
 
 ## 🚀 Live Site
