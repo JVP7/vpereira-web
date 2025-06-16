@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "vpereira™",
   description: "My portfolio site",
   icons: {
-    icon: "/public/cknight.ico",
+    icon: "/favicon.ico",
   },
 };
 
