@@ -38,7 +38,7 @@ const Blogs = () => (
 
     {/* cards grid */}
     <motion.div
-      className="grid gird-cols-1 md:grid-cols-3 gap-8"
+      className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       variants={staggerContainer}
       initial="initial"
       animate="animate"
