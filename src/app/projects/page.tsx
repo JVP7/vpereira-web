@@ -65,7 +65,7 @@ const Projects = () => (
 
               {/* title */}
               <motion.h3
-                className="text-xl font-semibold mb-2"
+                className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
                 whileHover={{ x: 5 }}
               >
                 {project.title}
