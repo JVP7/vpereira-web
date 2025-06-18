@@ -1,4 +1,3 @@
-/* src/app/components/Blogs.tsx */
 "use client";
 
 import { blogs } from "@/contents/blogs";
@@ -14,7 +13,7 @@ const Blogs = () => (
       variants={fadeInUp}
       initial="initial"
       animate="animate"
-      className="flex items-center text-[32px] md:text-[50px] text-black dark:text-[#CCDCF6] font-bold mb-12"
+      className="flex items-center text-[40px] md:text-[50px] text-black dark:text-[#CCDCF6] font-bold mb-12"
     >
       <span className="whitespace-nowrap pr-4">/latest blogs</span>
       <span className="hidden md:inline-block h-[1px] w-[35%] bg-[#233554] opacity-50" />
@@ -28,55 +27,54 @@ const Blogs = () => (
       animate="animate"
     >
       {blogs.map((blog) => (
-        <motion.div
-          key={blog.slug}
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          {...cardHoverSmall}
-        >
-          <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6">
-            <Link href={`/blogs/${blog.slug}`}>
+        <Link key={blog.slug} href={`/blogs/${blog.slug}`} className="block">
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            {...cardHoverSmall}
+          >
+            <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <motion.h3
                 className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
                 whileHover={{ x: 5 }}
               >
                 {blog.title}
               </motion.h3>
-            </Link>
 
-            <motion.p
-              className="text-[#8892b0] dark:text-[#8892b0] mb-4"
-              variants={fadeInUp}
-              initial="initial"
-              animate="animate"
-            >
-              {blog.excerpt}
-            </motion.p>
+              <motion.p
+                className="text-[#8892b0] dark:text-[#8892b0] mb-4"
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
+              >
+                {blog.excerpt}
+              </motion.p>
 
-            <motion.div
-              className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4"
-              variants={fadeInUp}
-              initial="initial"
-              animate="animate"
-            >
-              <motion.span
-                className="flex items-center"
-                whileHover={{ scale: 1.05 }}
+              <motion.div
+                className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4"
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
               >
-                <FaCalendarAlt className="mr-2" />
-                {new Date(blog.date).toLocaleDateString()}
-              </motion.span>
-              <motion.span
-                className="flex items-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <FaClock className="mr-2" />
-                {blog.readTime}
-              </motion.span>
-            </motion.div>
-          </article>
-        </motion.div>
+                <motion.span
+                  className="flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <FaCalendarAlt className="mr-2" />
+                  {new Date(blog.date).toLocaleDateString()}
+                </motion.span>
+                <motion.span
+                  className="flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <FaClock className="mr-2" />
+                  {blog.readTime}
+                </motion.span>
+              </motion.div>
+            </article>
+          </motion.div>
+        </Link>
       ))}
     </motion.div>
 

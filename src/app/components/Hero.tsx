@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { scaleIn, fadeInUp } from "@/utils/animations";
+import HeroHeading from "./HeroHeading";
 
 const Hero = () => {
   return (
@@ -28,13 +29,9 @@ const Hero = () => {
         </motion.div>
 
         {/* heading */}
-        <motion.h1
-          {...fadeInUp}
-          transition={{ delay: 0.3 }}
-          className="text-5xl md:text-7xl font-extrabold mb-3"
-        >
-          hi, <span className="text-primary">john</span> here.
-        </motion.h1>
+        <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
+          <HeroHeading />
+        </motion.div>
 
         {/* punch line */}
         <motion.p
@@ -52,8 +49,8 @@ const Hero = () => {
           className="text-[18px] text-[#8892B0] mt-1 mb-4 max-w-xl mx-auto"
         >
           I’m passionate about building intelligent, scalable tools that bridge
-          data and people. Currently focused on software development and machine
-          learning, I’m learning by building, and building with purpose.
+          data and people. Currently focused on machine learning and software
+          development, I’m learning by building, and building with purpose.
         </motion.p>
 
         {/* socials */}
