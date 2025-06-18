@@ -34,7 +34,7 @@ const Projects = () => (
           href={project.demoLink || project.githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="block"
+          className="block group"
         >
           <motion.div
             variants={fadeInUp}
@@ -56,7 +56,7 @@ const Projects = () => (
 
               {/* title */}
               <motion.h3
-                className="text-xl font-semibold mb-2"
+                className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
                 whileHover={{ x: 5 }}
               >
                 {project.title}
