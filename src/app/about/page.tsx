@@ -28,7 +28,7 @@ const About = () => (
 
     {/* profile + bio ---------------------------------------------------- */}
     <motion.div
-      className="flex flex-col items-center gap-12 mb-20"
+      className="flex flex-col items-center gap-12 mb-1"
       variants={staggerContainer}
       initial="initial"
       animate="animate"
@@ -50,7 +50,7 @@ const About = () => (
 
       {/* bio */}
       <motion.section
-        className="max-w-2xl"
+        className="max-w-2xl "
         variants={fadeInUp}
         initial="initial"
         animate="animate"
@@ -79,6 +79,22 @@ const About = () => (
           intelligent systems that make a real-world impact.
         </p>
       </motion.section>
+    </motion.div>
+    {/* Resume Button ---------------------------------------------------- */}
+    <motion.div
+      {...fadeInUp}
+      transition={{ delay: 0.7 }}
+      className="flex flex-col md:flex-row justify-center items-center gap-4 mt-1 mb-4"
+    >
+      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <a
+          href="/John's Resume.pdf"
+          download
+          className="bg-primary inline-block w-[220px] text-center text-white px-8 py-3 my-12 rounded-lg hover:bg-primary/80 transition-colors"
+        >
+          Get My Resume
+        </a>
+      </motion.div>
     </motion.div>
 
     {/* skills ----------------------------------------------------------- */}
@@ -246,7 +262,12 @@ const About = () => (
     </motion.section>
 
     {/* education -------------------------------------------------------- */}
-    <motion.section variants={fadeIn} initial="initial" animate="animate">
+    <motion.section
+      className="mb-16"
+      variants={fadeIn}
+      initial="initial"
+      animate="animate"
+    >
       <motion.h2
         variants={fadeInUp}
         initial="initial"
@@ -272,8 +293,12 @@ const About = () => (
           </h3>
           <p className="text-[#8892b0] mb-1">
             <span className="font-bold">
-              BBA in Information Systems | Minor in Computer Science
+              BBA in Information Systems | Minor: Computer Science
             </span>
+          </p>
+          <p className="text-[#8892b0] mb-1 font-bold">
+            Artificial Intelligence and Machine Learning – Undergraduate
+            Certificate
           </p>
           <p className="text-sm text-[#8892b0] mb-2">
             Aug 2022 – Dec 2026 · Upcoming Senior
@@ -285,6 +310,104 @@ const About = () => (
               Analytics)
             </li>
             <li>Member of ZipCode</li>
+          </ul>
+        </motion.div>
+      </motion.div>
+    </motion.section>
+
+    {/* certificates ----------------------------------------------------- */}
+    <motion.section
+      className="mb-16"
+      variants={fadeIn}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.h2
+        variants={fadeInUp}
+        initial="initial"
+        animate="animate"
+        className="section-title"
+      >
+        Certificates
+      </motion.h2>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+      >
+        {/* Completed */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHover}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Certificates - Completed
+          </h3>
+          <ul className="text-[#8892b0] space-y-2">
+            {[
+              {
+                name: "Introduction to AI with Python - Domestika",
+                link: "https://www.domestika.org/en/courses/5239-introduction-to-ai-with-python",
+              },
+              {
+                name: "Learning Git & GitHub - LinkedIn Learning",
+                link: "https://www.linkedin.com/learning/certificates/6fc99c36f9789b62fd205bc0186d12dcea291132a16959e0480a5ea626fee2b8?u=79600362",
+              },
+              {
+                name: "SQL Essential Training - LinkedIn Learning",
+                link: "https://www.linkedin.com/learning/certificates/e2fe91cd7f2e8a912a9a98088185fb7041df09479f56e40746ed28985f73e06c?u=79600362",
+              },
+            ].map((cert) => (
+              <li key={cert.name} className="flex items-center gap-2">
+                <FaAngleRight className="text-primary" />
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary cursor-pointer transition-colors"
+                >
+                  {cert.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* In Progress */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHover}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Certificates - In Progress
+          </h3>
+          <ul className="text-[#8892b0] space-y-2">
+            {[
+              {
+                name: "CS50P Introduction to Programming with Python - edX",
+                link: "https://learning.edx.org/course/course-v1:HarvardX+CS50P+Python/home",
+              },
+              {
+                name: "Machine Learning Specialization - Deeplearning.ai",
+                link: "https://www.coursera.org/specializations/machine-learning-introduction",
+              },
+            ].map((cert) => (
+              <li key={cert.name} className="flex items-center gap-2">
+                <FaAngleRight className="text-primary" />
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary cursor-pointer transition-colors"
+                >
+                  {cert.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </motion.div>
       </motion.div>

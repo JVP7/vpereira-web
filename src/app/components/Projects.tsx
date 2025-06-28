@@ -91,36 +91,46 @@ const Projects = () => (
                 ))}
               </motion.div>
 
-              {/* links */}
+              {/* external links (buttons now) */}
               <motion.div
                 className="flex gap-4 mt-2"
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
               >
-                <motion.a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaGithub className="w-6 h-6" />
-                </motion.a>
+                {/* GitHub */}
+                <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.95 }}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(
+                        project.githubLink,
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors cursor-pointer"
+                  >
+                    <FaGithub className="w-6 h-6" />
+                  </button>
+                </motion.div>
 
-                <motion.a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaExternalLinkAlt className="w-5 h-5" />
-                </motion.a>
+                {/* Demo */}
+                <motion.div whileHover={{ x: 5 }} whileTap={{ scale: 0.95 }}>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(
+                        project.demoLink,
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors cursor-pointer"
+                  >
+                    <FaExternalLinkAlt className="w-5 h-5" />
+                  </button>
+                </motion.div>
               </motion.div>
             </article>
           </motion.div>
