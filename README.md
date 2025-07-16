@@ -7,7 +7,7 @@ Welcome to my personal portfolio — a place where I share my work, thoughts, an
 </div>
 
 ## 🚀 Live Site
-🌐 Almost out.
+🌐 Almost out
 
 ## 📂 Tech Stack
 
