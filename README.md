@@ -7,7 +7,7 @@ Welcome to my personal portfolio — a place where I share my work, thoughts, an
 </div>
 
 ## 🚀 Live Site
-🌐 Final commits being done
+🌐 [vpereira.com](https://vpereira.com/)
 
 ## 📂 Tech Stack
 
