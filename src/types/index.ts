@@ -12,5 +12,6 @@ export interface Blog {
   excerpt: string;
   date: string;
   readTime: string;
-  slug: string;
+  slug?: string;
+  externalUrl?: string;
 }

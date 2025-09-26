@@ -2,48 +2,20 @@ import { Blog } from "@/types";
 
 export const blogs: Blog[] = [
   {
-    title: "Getting Started with Next.js 14",
-    excerpt: "Learn about the new features and improvements in Next.js 14.",
-    date: "2024-03-15",
-    readTime: "5 min read",
-    slug: "getting-started-with-nextjs-14",
-  },
-  {
-    title: "Mastering TypeScript for React",
+    title: "Lessons From My Summer as an IT Intern 💻",
     excerpt:
-      "A comprehensive guide to using TypeScript with React applications.",
-    date: "2024-03-10",
-    readTime: "8 min read",
-    slug: "mastering-typescript-for-react",
+      "A reflection of what I learned at my Internship throughout the summer.",
+    date: "2025-08-22",
+    readTime: "1 min read",
+    externalUrl:
+      "https://www.linkedin.com/pulse/lessons-from-my-summer-intern-john-v-pereira-xfuec",
   },
   {
-    title: "Building Responsive Layouts with Tailwind CSS",
-    excerpt:
-      "Tips and tricks for creating responsive designs using Tailwind CSS.",
-    date: "2024-03-05",
-    readTime: "6 min read",
-    slug: "building-responsive-layouts-with-tailwind-css",
-  },
-  {
-    title: "Understanding React Hooks",
-    excerpt: "A deep dive into React Hooks and how to use them effectively.",
-    date: "2024-03-01",
-    readTime: "7 min read",
-    slug: "understanding-react-hooks",
-  },
-  {
-    title: "Deploying Next.js Applications on Vercel",
-    excerpt:
-      "Step-by-step guide to deploying your Next.js applications on Vercel.",
-    date: "2024-02-25",
-    readTime: "4 min read",
-    slug: "deploying-nextjs-applications-on-vercel",
-  },
-  {
-    title: "Building a RESTful API with Node.js and Express",
-    excerpt: "Learn how to create a RESTful API using Node.js and Express.",
-    date: "2024-02-20",
-    readTime: "10 min read",
-    slug: "building-a-restful-api-with-nodejs-and-express",
+    title: "Small Steps, Big Growth 🪜",
+    excerpt: "A quick breakdown of how my summer has been going so far.",
+    date: "2025-07-22",
+    readTime: "1 min read",
+    externalUrl:
+      "https://www.linkedin.com/pulse/small-steps-big-growth-john-v-pereira-5lpuc",
   },
 ];

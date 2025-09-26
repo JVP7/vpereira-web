@@ -21,62 +21,65 @@ const Blogs = () => (
 
     {/* grid of posts */}
     <motion.div
-      className="grid gird-cols-1 md:grid-cols-3 gap-8"
+      className="grid grid-cols-1 md:grid-cols-3 gap-8" // fixed typo gird-cols → grid-cols
       variants={staggerContainer}
       initial="initial"
       animate="animate"
     >
       {blogs.map((blog) => (
         <motion.div
-          key={blog.slug}
+          key={blog.slug ?? blog.externalUrl}
           variants={fadeInUp}
           initial="initial"
           animate="animate"
           {...cardHoverSmall}
-          className="cursor-pointer"
-          onClick={() =>
-            window.open(`/blogs/${blog.slug}`, "_blank", "noopener,noreferrer")
-          }
         >
-          <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-            <motion.h3
-              className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
-              whileHover={{ x: 5 }}
-            >
-              {blog.title}
-            </motion.h3>
-
-            <motion.p
-              className="text-[#8892b0] dark:text-[#8892b0] mb-4"
-              variants={fadeInUp}
-              initial="initial"
-              animate="animate"
-            >
-              {blog.excerpt}
-            </motion.p>
-
-            <motion.div
-              className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4"
-              variants={fadeInUp}
-              initial="initial"
-              animate="animate"
-            >
-              <motion.span
-                className="flex items-center"
-                whileHover={{ scale: 1.05 }}
+          <Link
+            href={blog.externalUrl ?? `/blogs/${blog.slug}`}
+            target={blog.externalUrl ? "_blank" : "_self"}
+            rel={blog.externalUrl ? "noopener noreferrer" : undefined}
+            className="block"
+          >
+            <article className="bg-white dark:bg-[#1c2841]/50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+              <motion.h3
+                className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
+                whileHover={{ x: 5 }}
               >
-                <FaCalendarAlt className="mr-2" />
-                {new Date(blog.date).toLocaleDateString()}
-              </motion.span>
-              <motion.span
-                className="flex items-center"
-                whileHover={{ scale: 1.05 }}
+                {blog.title}
+              </motion.h3>
+
+              <motion.p
+                className="text-[#8892b0] dark:text-[#8892b0] mb-4"
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
               >
-                <FaClock className="mr-2" />
-                {blog.readTime}
-              </motion.span>
-            </motion.div>
-          </article>
+                {blog.excerpt}
+              </motion.p>
+
+              <motion.div
+                className="flex items-center text-sm text-[#8892b0] dark:text-[#8892b0] space-x-4"
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
+              >
+                <motion.span
+                  className="flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <FaCalendarAlt className="mr-2" />
+                  {new Date(blog.date).toLocaleDateString()}
+                </motion.span>
+                <motion.span
+                  className="flex items-center"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <FaClock className="mr-2" />
+                  {blog.readTime}
+                </motion.span>
+              </motion.div>
+            </article>
+          </Link>
         </motion.div>
       ))}
     </motion.div>
