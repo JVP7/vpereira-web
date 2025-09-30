@@ -119,20 +119,24 @@ const About = () => (
         initial="initial"
         animate="animate"
       >
-        {/* Frontend card */}
+        {/* Languages & Frameworks card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
           {...cardHover}
         >
-          <FaCode className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+          <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Languages & Frameworks</h3>
           <ul className="text-[#8892b0] space-y-2">
             {[
-              "React / Next.js",
+              "Python",
+              "C++",
+              "C#/.NET",
+              "SQL (MySQL, SQLite, Oracle)",
+              "JavaScript",
               "TypeScript",
-              "Tailwind CSS",
-              "HTML / CSS3",
+              "HTML",
+              "CSS",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <FaAngleRight className="text-primary" />
@@ -142,43 +146,58 @@ const About = () => (
           </ul>
         </motion.div>
 
-        {/* Backend card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Backend</h3>
-          <ul className="text-[#8892b0] space-y-2">
-            {["Python", "SQL", "MySQL", "SQLite", "Oracle SQL Developer"].map(
-              (item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <FaAngleRight className="text-primary" />
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-        </motion.div>
-
-        {/* Tools card */}
+        {/* ML & Data card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
           {...cardHover}
         >
           <FaCloud className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Machine Learning & Data
+          </h3>
           <ul className="text-[#8892b0] space-y-2">
-            {["C++", "C#", ".NET", "Git", "VS Code", "Wireshark"].map(
-              (item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <FaAngleRight className="text-primary" />
-                  {item}
-                </li>
-              )
-            )}
+            {[
+              "scikit-learn, Pandas, NumPy, Seaborn",
+              "Hugging Face, LlamaIndex, FAISS",
+              "PyPDF2, PyMuPDF, pdfplumber",
+              "Tesseract, EasyOCR, Gradio",
+              "Tableau, Alteryx, JMP",
+              "Excel (Pivot Tables, Data Analysis)",
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <FaAngleRight className="text-primary" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/*Dev & Tools card */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHover}
+        >
+          <FaCode className="h-8 w-8 text-primary mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Dev & Tools</h3>
+          <ul className="text-[#8892b0] space-y-2">
+            {[
+              "Git/GitHub",
+              "VS Code",
+              "SQL Developer",
+              "Oracle Data Modeler",
+              "Freshdesk Automations",
+              "Next.js",
+              "React",
+              "Tailwind CSS",
+              "Framer Motion",
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <FaAngleRight className="text-primary" />
+                {item}
+              </li>
+            ))}
           </ul>
         </motion.div>
       </motion.div>
@@ -213,26 +232,86 @@ const About = () => (
           {...cardHoverSmall}
         >
           <h3 className="text-xl font-semibold mb-2">
-            IT Intern @ <span className="text-primary">MFS Supply</span>
+            AI & Machine Learning Extern, Outamation Inc. @{" "}
+            <span className="text-primary">Extern</span>
           </h3>
-          <p className="text-primary mb-2">May 2025 - Present</p>
+          <p className="text-primary mb-2">Sept 2025 - Present</p>
           <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
             <li>
-              Delivering hands-on IT support, resolving help desk tickets and
-              upgrading employee workstations across departments.
+              Build end-to-end Python pipelines to extract and structure data
+              from unstructured PDFs.
             </li>
             <li>
-              Contributing to large-scale IT projects including server
-              migrations, ISP setups, and remote office support.
+              Apply NLP and large language models to create AI-powered document
+              search and retrieval tools.
             </li>
             <li>
-              Participating in vendor meetings and assisted with hardware setup,
-              workstation imaging, and system maintenance.
+              Integrate OCR and computer vision methods for accurate mortgage
+              data parsing.
+            </li>
+            <li>
+              Prototype RAG-powered chatbots for interactive, document-based
+              Q&A.
             </li>
           </ul>
         </motion.div>
 
         {/** second experience card */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Student Technology Assistant @{" "}
+            <span className="text-primary">
+              University of Akron School of Law
+            </span>
+          </h3>
+          <p className="text-primary mb-2">Aug 2025 - Present</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Provide daily IT support for 100+ faculty, staff, and students,
+              resolving hardware, software, and network issues.
+            </li>
+            <li>
+              Maintain and troubleshoot A/V systems to ensure smooth delivery of
+              hybrid and in-person classes.
+            </li>
+            <li>
+              Configure and update Windows/macOS devices to keep the law
+              school’s IT infrastructure reliable.
+            </li>
+          </ul>
+        </motion.div>
+
+        {/** third experience card */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            IT Intern @ <span className="text-primary">MFS Supply</span>
+          </h3>
+          <p className="text-primary mb-2">May 2025 - Aug 2025</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Designed and deployed Freshdesk automations and workflows, cutting
+              manual workload and response times.
+            </li>
+            <li>
+              Built a custom NetSuite calendar app in JavaScript to improve
+              purchase order visibility and tracking.
+            </li>
+            <li>
+              Resolved 100+ tickets/month and repaired 10+ machines weekly,
+              reducing downtime for 250+ employees.
+            </li>
+          </ul>
+        </motion.div>
+
+        {/** fourth experience card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
@@ -245,16 +324,16 @@ const About = () => (
           <p className="text-primary mb-2">May 2021 - Aug 2021</p>
           <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
             <li>
-              Improved internal systems and reduced technical issues, increasing
-              IT efficiency across store operations.
-            </li>
-            <li>
-              Led a full IT audit and implemented software upgrades that cut
+              Audited and improved IT infrastructure, reducing recurring
               technical issues by 30%.
             </li>
             <li>
-              Designed and delivered training for 9+ staff members, improving
-              data accuracy and reducing reporting errors.
+              Delivered responsive Tier 1 support to ~15 employees, including
+              the CEO.
+            </li>
+            <li>
+              Trained staff on data entry and reporting best practices, reducing
+              errors and improving accuracy.
             </li>
           </ul>
         </motion.div>
@@ -301,7 +380,7 @@ const About = () => (
             Certificate
           </p>
           <p className="text-sm text-[#8892b0] mb-2">
-            Aug 2022 – Dec 2026 · Upcoming Senior
+            Aug 2022 – Dec 2026 · Senior
           </p>
           <ul className="list-disc list-inside text-sm text-[#8892b0] space-y-1">
             <li>Member of Phi Kappa Psi Fraternity</li>
@@ -309,7 +388,6 @@ const About = () => (
               Member of SISTA (Society for Information Systems, Technology and
               Analytics)
             </li>
-            <li>Member of ZipCode</li>
           </ul>
         </motion.div>
       </motion.div>
@@ -388,12 +466,12 @@ const About = () => (
           <ul className="text-[#8892b0] space-y-2">
             {[
               {
-                name: "CS50P Introduction to Programming with Python - edX",
-                link: "https://learning.edx.org/course/course-v1:HarvardX+CS50P+Python/home",
+                name: "CS50X Introduction to Computer Science - edX",
+                link: "https://pll.harvard.edu/course/cs50-introduction-computer-science",
               },
               {
                 name: "Machine Learning Specialization - Deeplearning.ai",
-                link: "https://www.coursera.org/specializations/machine-learning-introduction",
+                link: "https://www.deeplearning.ai/courses/machine-learning-specialization/",
               },
             ].map((cert) => (
               <li key={cert.name} className="flex items-center gap-2">
