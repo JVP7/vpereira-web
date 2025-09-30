@@ -18,4 +18,24 @@ export const projects: Project[] = [
     demoLink: "",
     image: "/projects/spaceinvaders.png",
   },
+  {
+    title: "Friday - Voice Assistant",
+    description:
+      "AI Voice Assistant using Python, LiveKit, Google Gemini, Deepgram, and Cartesia.",
+    technologies: [
+      "Python",
+      "LiveKit",
+      "Google Gemini",
+      "Deepgram",
+      "Cartesia",
+      "Silero",
+      "LangChain",
+      "ddgs",
+      "aiohttp",
+      "dotenv",
+    ],
+    githubLink: "https://github.com/JVP7/friday-voice-assistant",
+    demoLink: "",
+    image: "/projects/fridayvoiceassistant.png",
+  },
 ];
