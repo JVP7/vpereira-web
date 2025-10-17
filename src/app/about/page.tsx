@@ -50,33 +50,49 @@ const About = () => (
 
       {/* bio */}
       <motion.section
-        className="max-w-2xl "
+        className="max-w-2xl"
         variants={fadeInUp}
         initial="initial"
         animate="animate"
       >
-        <p className="text-[18px] text-[#8892B0] leading-relaxed">
+        <p className="text-[18px] text-[#8892B0] leading-relaxed text-center">
           I’m an{" "}
           <span className="font-semibold text-primary">
-            IT Intern at MFS Supply
+            Information Systems major{" "}
           </span>
-          , pursuing a degree in{" "}
+          with a{" "}
           <span className="font-semibold text-primary">
-            Information Systems
+            Computer Science minor
           </span>{" "}
-          with a minor in{" "}
-          <span className="font-semibold text-primary">Computer Science</span>{" "}
+          and an
+          <span className="font-semibold text-primary">
+            {" "}
+            Undergraduate Certificate in AI & Machine Learning{" "}
+          </span>
           at{" "}
           <span className="font-semibold text-primary">
             The University of Akron
           </span>
-          . My focus lies at the intersection of{" "}
+          , currently working as a{" "}
+          <span className="font-semibold text-primary">
+            Student Technology Assistant{" "}
+          </span>
+          and an{" "}
+          <span className="font-semibold text-primary">AI/ML Extern</span>. My
+          work sits at the intersection of{" "}
           <span className="font-semibold text-primary">
             software engineering
-          </span>{" "}
-          and <span className="font-semibold text-primary">applied AI</span>,
-          with plans to pursue a graduate degree and long-term goals of building
-          intelligent systems that make a real-world impact.
+          </span>
+          , <span className="font-semibold text-primary">data analytics</span>,
+          and{" "}
+          <span className="font-semibold text-primary">
+            applied machine learning
+          </span>
+          , where I focus on building intelligent systems that bridge research
+          and real-world impact. I plan to pursue a master’s in{" "}
+          <span className="font-semibold text-primary">Machine Learning</span>{" "}
+          after graduation, continuing to explore how AI can drive meaningful
+          innovation across industries.
         </p>
       </motion.section>
     </motion.div>
