@@ -252,24 +252,6 @@ const About = () => (
             <span className="text-primary">Schaeffler</span>
           </h3>
           <p className="text-primary mb-2">Jan 2026 - Present</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
-            <li>
-              Build end-to-end Python pipelines to extract and structure data
-              from unstructured PDFs.
-            </li>
-            <li>
-              Apply NLP and large language models to create AI-powered document
-              search and retrieval tools.
-            </li>
-            <li>
-              Integrate OCR and computer vision methods for accurate mortgage
-              data parsing.
-            </li>
-            <li>
-              Prototype RAG-powered chatbots for interactive, document-based
-              Q&A.
-            </li>
-          </ul>
         </motion.div>
 
         {/** second experience card */}
