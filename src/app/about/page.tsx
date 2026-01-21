@@ -248,10 +248,10 @@ const About = () => (
           {...cardHoverSmall}
         >
           <h3 className="text-xl font-semibold mb-2">
-            AI & Machine Learning Extern, Outamation Inc. @{" "}
-            <span className="text-primary">Extern</span>
+            Product Manager Co-Op @{" "}
+            <span className="text-primary">Schaeffler</span>
           </h3>
-          <p className="text-primary mb-2">Sept 2025 - Present</p>
+          <p className="text-primary mb-2">Jan 2026 - Present</p>
           <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
             <li>
               Build end-to-end Python pipelines to extract and structure data
@@ -279,12 +279,43 @@ const About = () => (
           {...cardHoverSmall}
         >
           <h3 className="text-xl font-semibold mb-2">
+            AI & Machine Learning Extern, Outamation Inc. @{" "}
+            <span className="text-primary">Extern</span>
+          </h3>
+          <p className="text-primary mb-2">Sept 2025 - Dec 2025</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Build end-to-end Python pipelines to extract and structure data
+              from unstructured PDFs.
+            </li>
+            <li>
+              Apply NLP and large language models to create AI-powered document
+              search and retrieval tools.
+            </li>
+            <li>
+              Integrate OCR and computer vision methods for accurate mortgage
+              data parsing.
+            </li>
+            <li>
+              Prototype RAG-powered chatbots for interactive, document-based
+              Q&A.
+            </li>
+          </ul>
+        </motion.div>
+
+        {/** third experience card */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
             Student Technology Assistant @{" "}
             <span className="text-primary">
               University of Akron School of Law
             </span>
           </h3>
-          <p className="text-primary mb-2">Aug 2025 - Present</p>
+          <p className="text-primary mb-2">Aug 2025 - Dec 2025</p>
           <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
             <li>
               Provide daily IT support for 100+ faculty, staff, and students,
@@ -301,7 +332,7 @@ const About = () => (
           </ul>
         </motion.div>
 
-        {/** third experience card */}
+        {/** fourth experience card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
@@ -327,7 +358,7 @@ const About = () => (
           </ul>
         </motion.div>
 
-        {/** fourth experience card */}
+        {/** fifth experience card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
