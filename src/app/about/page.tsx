@@ -248,10 +248,28 @@ const About = () => (
           {...cardHoverSmall}
         >
           <h3 className="text-xl font-semibold mb-2">
-            Product Manager Co-Op @{" "}
+            Product Management Co-Op @{" "}
             <span className="text-primary">Schaeffler</span>
           </h3>
           <p className="text-primary mb-2">Jan 2026 - Present</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Support product planning by gathering requirements, analyzing user
+              needs, and prioritizing features.
+            </li>
+            <li>
+              Collaborate cross-functionally to translate business requirements
+              into actionable deliverables.
+            </li>
+            <li>
+              Analyze data and metrics to inform product decisions and identify
+              improvement opportunities.
+            </li>
+            <li>
+              Contribute to product strategy discussions around scope and
+              tradeoffs in an industrial context.
+            </li>
+          </ul>
         </motion.div>
 
         {/** second experience card */}
@@ -363,6 +381,60 @@ const About = () => (
             <li>
               Trained staff on data entry and reporting best practices, reducing
               errors and improving accuracy.
+            </li>
+          </ul>
+        </motion.div>
+      </motion.div>
+    </motion.section>
+
+    {/* research -------------------------------------------------------- */}
+    <motion.section
+      className="mb-16"
+      variants={fadeIn}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.h2
+        variants={fadeInUp}
+        initial="initial"
+        animate="animate"
+        className="section-title"
+      >
+        Research
+      </motion.h2>
+
+      <motion.div
+        className="max-w-3xl mx-auto space-y-8"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Undergraduate Research Assistant - Computer Vision @{" "}
+            <span className="text-primary">The University of Akron</span>
+          </h3>
+          <p className="text-primary mb-2">Jan 2026 - Present</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Implement YOLOv8/YOLOv10 object detection models in Python and
+              PyTorch for applied cv research.
+            </li>
+            <li>
+              Train, tune, and evaluate models using real-world datasets,
+              analyzing accuracy and deployment performance.
+            </li>
+            <li>
+              Design preprocessing pipelines and experiments to improve
+              detection robustness and model generalization.
+            </li>
+            <li>
+              Document results in a formal research report with planned academic
+              publication under faculty supervision.
             </li>
           </ul>
         </motion.div>
