@@ -58,41 +58,47 @@ const About = () => (
         <p className="text-[18px] text-[#8892B0] leading-relaxed text-center">
           I’m an{" "}
           <span className="font-semibold text-primary">
-            Information Systems major{" "}
-          </span>
+            Information Systems major
+          </span>{" "}
           with a{" "}
           <span className="font-semibold text-primary">
             Computer Science minor
           </span>{" "}
-          and an
+          and an{" "}
           <span className="font-semibold text-primary">
-            {" "}
-            Undergraduate Certificate in AI & Machine Learning{" "}
-          </span>
+            Undergraduate Certificate in AI & Machine Learning
+          </span>{" "}
           at{" "}
           <span className="font-semibold text-primary">
             The University of Akron
           </span>
-          , currently working as a{" "}
+          . I currently work as a{" "}
           <span className="font-semibold text-primary">
-            Student Technology Assistant{" "}
-          </span>
-          and an{" "}
-          <span className="font-semibold text-primary">AI/ML Extern</span>. My
-          work sits at the intersection of{" "}
+            Product Management Co-Op
+          </span>{" "}
+          at <span className="font-semibold text-primary">Schaeffler</span> and
+          conduct undergraduate research in{" "}
+          <span className="font-semibold text-primary">computer vision</span>,
+          developing{" "}
           <span className="font-semibold text-primary">
-            software engineering
-          </span>
-          , <span className="font-semibold text-primary">data analytics</span>,
-          and{" "}
+            YOLO-based object detection models
+          </span>{" "}
+          in{" "}
+          <span className="font-semibold text-primary">Python and PyTorch</span>
+          . My experience spans{" "}
           <span className="font-semibold text-primary">
             applied machine learning
           </span>
-          , where I focus on building intelligent systems that bridge research
-          and real-world impact. I plan to pursue a master’s in{" "}
+          ,{" "}
+          <span className="font-semibold text-primary">
+            software engineering
+          </span>
+          , and{" "}
+          <span className="font-semibold text-primary">data analytics</span>,
+          with a focus on building intelligent systems that bridge research and
+          real-world impact. I plan to pursue a master’s in{" "}
           <span className="font-semibold text-primary">Machine Learning</span>{" "}
-          after graduation, continuing to explore how AI can drive meaningful
-          innovation across industries.
+          after graduation and continue advancing applied AI solutions.
         </p>
       </motion.section>
     </motion.div>
