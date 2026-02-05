@@ -79,7 +79,7 @@ const About = () => (
           at <span className="font-semibold text-primary">Schaeffler</span> and
           conduct undergraduate research in{" "}
           <span className="font-semibold text-primary">computer vision</span>,
-          developing{" "}
+          developing and evaluating{" "}
           <span className="font-semibold text-primary">
             YOLO-based object detection models
           </span>{" "}
