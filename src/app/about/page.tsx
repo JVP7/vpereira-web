@@ -153,12 +153,9 @@ const About = () => (
             {[
               "Python",
               "C++",
-              "C#/.NET",
               "SQL (MySQL, SQLite, Oracle)",
               "JavaScript",
-              "TypeScript",
-              "HTML",
-              "CSS",
+              "HTML/CSS",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <FaAngleRight className="text-primary" />
@@ -175,17 +172,14 @@ const About = () => (
           {...cardHover}
         >
           <FaCloud className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">
-            Machine Learning & Data
-          </h3>
+          <h3 className="text-xl font-semibold mb-2">Machine Learning & AI</h3>
           <ul className="text-[#8892b0] space-y-2">
             {[
-              "scikit-learn, Pandas, NumPy, Seaborn",
-              "Hugging Face, LlamaIndex, FAISS",
-              "PyPDF2, PyMuPDF, pdfplumber",
-              "Tesseract, EasyOCR, Gradio",
+              "PyTorch, TensorFlow, Scikit-learn",
+              "HuggingFace, LlamaIndex, FAISS",
+              "Ultralytics (YOLO/RT-DETR)",
+              "RAG & Vector Databases",
               "Tableau, Alteryx, JMP",
-              "Excel (Pivot Tables, Data Analysis)",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <FaAngleRight className="text-primary" />
@@ -209,11 +203,8 @@ const About = () => (
               "VS Code",
               "SQL Developer",
               "Oracle Data Modeler",
-              "Freshdesk Automations",
               "Next.js",
               "React",
-              "Tailwind CSS",
-              "Framer Motion",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <FaAngleRight className="text-primary" />
