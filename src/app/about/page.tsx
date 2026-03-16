@@ -203,8 +203,7 @@ const About = () => (
               "VS Code",
               "SQL Developer",
               "Oracle Data Modeler",
-              "Next.js",
-              "React",
+              "React, Next.js",
             ].map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <FaAngleRight className="text-primary" />
@@ -418,20 +417,20 @@ const About = () => (
           <p className="text-primary mb-2">Jan 2026 - Present</p>
           <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
             <li>
-              Implement YOLOv8/YOLOv10 object detection models in Python and
-              PyTorch for applied cv research.
+              Comparing CV architectures (YOLOv8, RT-DETR, EfficientDet) on
+              custom datasets using FLIR hardware.
             </li>
             <li>
-              Train, tune, and evaluate models using real-world datasets,
-              analyzing accuracy and deployment performance.
+              Benchmarking models across precision, recall, and mAP50 to
+              identify tradeoffs and research findings.
             </li>
             <li>
-              Design preprocessing pipelines and experiments to improve
-              detection robustness and model generalization.
+              Building preprocessing pipelines and experiments to improve
+              robustness on imbalanced real-world data.
             </li>
             <li>
-              Document results in a formal research report with planned academic
-              publication under faculty supervision.
+              Authoring findings as first author and targeting submission under
+              faculty supervision.
             </li>
           </ul>
         </motion.div>
@@ -480,13 +479,7 @@ const About = () => (
           <p className="text-sm text-[#8892b0] mb-2">
             Aug 2022 – Dec 2026 · Senior
           </p>
-          <ul className="list-disc list-inside text-sm text-[#8892b0] space-y-1">
-            <li>Member of Phi Kappa Psi Fraternity</li>
-            <li>
-              Member of SISTA (Society for Information Systems, Technology and
-              Analytics)
-            </li>
-          </ul>
+          <ul className="list-disc list-inside text-sm text-[#8892b0] space-y-1"></ul>
         </motion.div>
       </motion.div>
     </motion.section>
