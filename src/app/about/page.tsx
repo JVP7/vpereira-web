@@ -237,6 +237,26 @@ const About = () => (
         initial="initial"
         animate="animate"
       >
+        {/** incoming experience card */}
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Incoming Agentic Data Analyst @{" "}
+            <span className="text-primary">Seagate Technology</span>
+          </h3>
+          <p className="text-primary mb-2">Incoming</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Building LLM-integrated pipelines and agentic workflows for
+              semantic search, data ingestion, and business intelligence
+              automation using RAG and vector databases.
+            </li>
+          </ul>
+        </motion.div>
+
         {/** first experience card */}
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
@@ -405,6 +425,24 @@ const About = () => (
         initial="initial"
         animate="animate"
       >
+        <motion.div
+          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
+          variants={fadeInUp}
+          {...cardHoverSmall}
+        >
+          <h3 className="text-xl font-semibold mb-2">
+            Incoming AI Research Fellow @{" "}
+            <span className="text-primary">Algoverse</span>
+          </h3>
+          <p className="text-primary mb-2">Incoming</p>
+          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+            <li>
+              Incoming LLM research cohort member. Conducting applied research
+              on large language models targeting NeurIPS publication.
+            </li>
+          </ul>
+        </motion.div>
+
         <motion.div
           className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
           variants={fadeInUp}
