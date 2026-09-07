@@ -1,155 +1,62 @@
-/* src/app/components/About.tsx */
-"use client";
-
-import Image from "next/image";
+import Portrait from "../components/Portrait";
 import { FaCode, FaAngleRight, FaLaptopCode, FaCloud } from "react-icons/fa";
 
-import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeInDown,
-  fadeIn,
-  staggerContainer,
-  cardHover,
-  cardHoverSmall,
-} from "@/utils/animations";
-
 const About = () => (
-  <div className="container max-w-7xl mx-auto px-4 py-20">
+  <div className="about-page wrap">
     {/* main heading */}
-    <motion.h1
-      variants={fadeInDown}
-      initial="initial"
-      animate="animate"
-      className="text-4xl font-bold mb-12 text-center"
-    >
-      About Me
-    </motion.h1>
+    <h1>About Me</h1>
 
     {/* profile + bio ---------------------------------------------------- */}
-    <motion.div
-      className="flex flex-col items-center gap-12 mb-1"
-      variants={staggerContainer}
-      initial="initial"
-      animate="animate"
-    >
+    <div className="about-intro">
       {/* profile picture */}
-      <motion.div
-        className="w-60 h-60 rounded-2xl overflow-hidden shadow-lg"
-        variants={fadeInUp}
-        {...cardHover}
-      >
-        <Image
-          src="/profile.avif"
-          alt="John V. Pereira"
-          width={240}
-          height={240}
-          className="object-cover w-full h-full"
-        />
-      </motion.div>
+      <Portrait />
 
       {/* bio */}
-      <motion.section
-        className="max-w-2xl"
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-      >
-        <p className="text-[18px] text-[#8892B0] leading-relaxed text-center">
-          I’m an{" "}
-          <span className="font-semibold text-primary">
-            Information Systems major
-          </span>{" "}
-          with a{" "}
-          <span className="font-semibold text-primary">
-            Computer Science minor
-          </span>{" "}
-          and an{" "}
-          <span className="font-semibold text-primary">
-            Undergraduate Certificate in AI & Machine Learning
-          </span>{" "}
-          at{" "}
-          <span className="font-semibold text-primary">
-            The University of Akron
-          </span>
-          . I currently work as a{" "}
-          <span className="font-semibold text-primary">
-            Product Management Co-Op
-          </span>{" "}
-          at <span className="font-semibold text-primary">Schaeffler</span> and
-          conduct undergraduate research in{" "}
-          <span className="font-semibold text-primary">computer vision</span>,
-          developing and evaluating{" "}
-          <span className="font-semibold text-primary">
-            YOLO-based object detection models
-          </span>{" "}
-          in{" "}
-          <span className="font-semibold text-primary">Python and PyTorch</span>
-          . My experience spans{" "}
-          <span className="font-semibold text-primary">
-            applied machine learning
-          </span>
-          ,{" "}
-          <span className="font-semibold text-primary">
-            software engineering
-          </span>
-          , and{" "}
-          <span className="font-semibold text-primary">data analytics</span>,
-          with a focus on building intelligent systems that bridge research and
-          real-world impact. I plan to pursue a master’s in{" "}
-          <span className="font-semibold text-primary">Machine Learning</span>{" "}
-          after graduation and continue advancing applied AI solutions.
+      <section>
+        <p>
+          Nice of you to be here! I&apos;m a senior at{" "}
+          <strong>The University of Akron</strong> studying{" "}
+          <strong>Information Systems</strong>, with a{" "}
+          <strong>Computer Science</strong> minor and a certificate in{" "}
+          <strong>AI and Machine Learning</strong>. I graduate this December.
         </p>
-      </motion.section>
-    </motion.div>
+        <p>
+          Right now I&apos;m an{" "}
+          <strong>AI Engineering Co-Op at Peak Nano</strong>, doing{" "}
+          <strong>AI safety research at Algoverse</strong>, and working as an{" "}
+          <strong>undergraduate researcher in computer vision</strong>,
+          evaluating object detection models on thermal imagery. Before that I
+          spent the summer at Seagate building data pipelines and dashboards for
+          the RevOps team.
+        </p>
+        <p>
+          After graduation I&apos;m headed to a{" "}
+          <strong>master&apos;s in Machine Learning</strong>. I really enjoy
+          meeting new people, exchanging ideas, and hearing what they&apos;re
+          working on, so if you want to talk,{" "}
+          <a href="/contact">please reach out</a>.
+        </p>
+      </section>
+    </div>
     {/* Resume Button ---------------------------------------------------- */}
-    <motion.div
-      {...fadeInUp}
-      transition={{ delay: 0.7 }}
-      className="flex flex-col md:flex-row justify-center items-center gap-4 mt-1 mb-4"
-    >
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <a
-          href="/John's Resume.pdf"
-          download
-          className="bg-primary inline-block w-[220px] text-center text-white px-8 py-3 my-12 rounded-lg hover:bg-primary/80 transition-colors"
-        >
+    <div>
+      <div>
+        <a href="/pereira-v-john-resume.pdf" download="pereira-v-john-resume.pdf" className="resume-link">
           Get My Resume
         </a>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
 
     {/* skills ----------------------------------------------------------- */}
-    <motion.section
-      className="mb-16"
-      variants={fadeIn}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-        className="section-title"
-      >
-        Tech
-      </motion.h2>
+    <section>
+      <h2>Tech</h2>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
+      <div>
         {/* Languages & Frameworks card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Languages & Frameworks</h3>
-          <ul className="text-[#8892b0] space-y-2">
+        <div>
+          <FaLaptopCode />
+          <h3>Languages & Frameworks</h3>
+          <ul>
             {[
               "Python",
               "C++",
@@ -157,23 +64,19 @@ const About = () => (
               "JavaScript",
               "HTML/CSS",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <FaAngleRight className="text-primary" />
+              <li key={item}>
+                <FaAngleRight />
                 {item}
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
         {/* ML & Data card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <FaCloud className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Machine Learning & AI</h3>
-          <ul className="text-[#8892b0] space-y-2">
+        <div>
+          <FaCloud />
+          <h3>Machine Learning & AI</h3>
+          <ul>
             {[
               "PyTorch, TensorFlow, Scikit-learn",
               "HuggingFace, LlamaIndex, FAISS",
@@ -181,23 +84,19 @@ const About = () => (
               "RAG & Vector Databases",
               "Tableau, Alteryx, JMP",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <FaAngleRight className="text-primary" />
+              <li key={item}>
+                <FaAngleRight />
                 {item}
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
         {/*Dev & Tools card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <FaCode className="h-8 w-8 text-primary mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Dev & Tools</h3>
-          <ul className="text-[#8892b0] space-y-2">
+        <div>
+          <FaCode />
+          <h3>Dev & Tools</h3>
+          <ul>
             {[
               "Git/GitHub",
               "VS Code",
@@ -205,134 +104,142 @@ const About = () => (
               "Oracle Data Modeler",
               "React, Next.js",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <FaAngleRight className="text-primary" />
+              <li key={item}>
+                <FaAngleRight />
                 {item}
               </li>
             ))}
           </ul>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
 
     {/* experience ------------------------------------------------------- */}
-    <motion.section
-      className="mb-16"
-      variants={fadeIn}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-        className="section-title"
-      >
-        Experience
-      </motion.h2>
+    <section>
+      <h2>Experience</h2>
 
-      <motion.div
-        className="max-w-3xl mx-auto space-y-8"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
-        {/** incoming experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Incoming Agentic Data Analyst @{" "}
-            <span className="text-primary">Seagate Technology</span>
-          </h3>
-          <p className="text-primary mb-2">Incoming</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
-            <li>
-              Building LLM-integrated pipelines and agentic workflows for
-              semantic search, data ingestion, and business intelligence
-              automation using RAG and vector databases.
-            </li>
-          </ul>
-        </motion.div>
-
+      <div>
         {/** first experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Product Management Co-Op @{" "}
-            <span className="text-primary">Schaeffler</span>
+        <div>
+          <h3>
+            AI Engineering Co-Op @ <span>Peak Nano</span>
           </h3>
-          <p className="text-primary mb-2">Jan 2026 - Present</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>September 2026 – Present</p>
+          <ul>
             <li>
-              Support product planning by gathering requirements, analyzing user
-              needs, and prioritizing features.
-            </li>
-            <li>
-              Collaborate cross-functionally to translate business requirements
-              into actionable deliverables.
-            </li>
-            <li>
-              Analyze data and metrics to inform product decisions and identify
-              improvement opportunities.
-            </li>
-            <li>
-              Contribute to product strategy discussions around scope and
-              tradeoffs in an industrial context.
+              Building AI and ML infrastructure for internal automation
+              initiatives.
             </li>
           </ul>
-        </motion.div>
+        </div>
 
         {/** second experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            AI & Machine Learning Extern, Outamation Inc. @{" "}
-            <span className="text-primary">Extern</span>
+        <div>
+          <h3>
+            Agentic Data Analyst @ <span>Seagate Technology</span>
           </h3>
-          <p className="text-primary mb-2">Sept 2025 - Dec 2025</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>June 2026 – September 2026</p>
+          <ul>
             <li>
-              Build end-to-end Python pipelines to extract and structure data
+              Owned the weekly Customer and Product Master change review for
+              RevOps, replacing a multi-workbook Excel process with a Power BI
+              dashboard now run in Monday reviews across 140,000+ records.
+            </li>
+            <li>
+              Cut the weekly review queue 38% on customer records and 70% on
+              product records by classifying changes on business priority,
+              removing 10,000+ irrelevant rows.
+            </li>
+            <li>
+              Narrowed a product status cleanup backlog from 90,000+ records to
+              under 20 actionable ones by using lifecycle status as supporting
+              evidence.
+            </li>
+            <li>
+              Automated the weekly missing-PO escalation by reverse-engineering
+              the manual business rules, matching the analyst&apos;s output on
+              all 150+ records with zero variance across 6 levels.
+            </li>
+            <li>
+              Built deterministic validation with a quarantine queue that
+              blocked 25% of incoming loads from reaching reporting, and exposed
+              results through a read-only MCP layer that cut agent access to raw
+              data from 16,000+ rows to zero.
+            </li>
+          </ul>
+        </div>
+
+        {/** third experience card */}
+        <div>
+          <h3>
+            Product Management Co-Op @ <span>Schaeffler</span>
+          </h3>
+          <p>January 2026 – May 2026</p>
+          <ul>
+            <li>
+              Expanded competitive coverage from 25 to 32 manufacturers across
+              the U.S. and Canada, profiling each across 7 attributes: brand,
+              HQ, segment, sales model, revenue, ownership, and market status.
+            </li>
+            <li>
+              Cut 5 of 25 original entries — 20% of the list — after finding
+              they were distributors, retailers, or OE-only suppliers rather
+              than competitors, then re-audited all remaining entries against
+              manufacturer-only criteria.
+            </li>
+            <li>
+              Built competitor pricing coverage from 0 to 50+ SKUs, producing
+              the pricing-tier axis that positioned all 32 manufacturers across
+              4 quadrants.
+            </li>
+            <li>
+              Delivered a 10-slide analysis to product management leadership and
+              the Strongsville VP covering 6 geographic clusters, 5 revenue
+              tiers, 6 buying drivers, 8 competitor USP profiles, and 4
+              identified market gaps.
+            </li>
+            <li>
+              Raised ACES/PIES spec completeness from 0% to ~53% across 30 SKUs,
+              reaching 100% on 10 and identifying source-data gaps that capped
+              the remaining 20.
+            </li>
+          </ul>
+        </div>
+
+        {/** fourth experience card */}
+        <div>
+          <h3>
+            AI & Machine Learning Extern, Outamation Inc. @ <span>Extern</span>
+          </h3>
+          <p>September 2025 – December 2025</p>
+          <ul>
+            <li>
+              Built end-to-end Python pipelines to extract and structure data
               from unstructured PDFs.
             </li>
             <li>
-              Apply NLP and large language models to create AI-powered document
-              search and retrieval tools.
+              Applied NLP and large language models to create AI-powered
+              document search and retrieval tools.
             </li>
             <li>
-              Integrate OCR and computer vision methods for accurate mortgage
+              Integrated OCR and computer vision methods for accurate mortgage
               data parsing.
             </li>
             <li>
-              Prototype RAG-powered chatbots for interactive, document-based
+              Prototyped RAG-powered chatbots for interactive, document-based
               Q&A.
             </li>
           </ul>
-        </motion.div>
+        </div>
 
-        {/** third experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
+        {/** fifth experience card */}
+        <div>
+          <h3>
             Student Technology Assistant @{" "}
-            <span className="text-primary">
-              University of Akron School of Law
-            </span>
+            <span>University of Akron School of Law</span>
           </h3>
-          <p className="text-primary mb-2">Aug 2025 - Dec 2025</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>August 2025 – December 2025</p>
+          <ul>
             <li>
               Provide daily IT support for 100+ faculty, staff, and students,
               resolving hardware, software, and network issues.
@@ -346,19 +253,15 @@ const About = () => (
               school’s IT infrastructure reliable.
             </li>
           </ul>
-        </motion.div>
+        </div>
 
-        {/** fourth experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            IT Intern @ <span className="text-primary">MFS Supply</span>
+        {/** sixth experience card */}
+        <div>
+          <h3>
+            IT Intern @ <span>MFS Supply</span>
           </h3>
-          <p className="text-primary mb-2">May 2025 - Aug 2025</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>May 2025 – August 2025</p>
+          <ul>
             <li>
               Designed and deployed Freshdesk automations and workflows, cutting
               manual workload and response times.
@@ -372,20 +275,15 @@ const About = () => (
               reducing downtime for 250+ employees.
             </li>
           </ul>
-        </motion.div>
+        </div>
 
-        {/** fifth experience card */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Systems Engineer Intern @{" "}
-            <span className="text-primary">Supermercado Brazil</span>
+        {/** seventh experience card */}
+        <div>
+          <h3>
+            Systems Engineer Intern @ <span>Supermercado Brazil</span>
           </h3>
-          <p className="text-primary mb-2">May 2021 - Aug 2021</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>May 2021 – August 2021</p>
+          <ul>
             <li>
               Audited and improved IT infrastructure, reducing recurring
               technical issues by 30%.
@@ -399,161 +297,85 @@ const About = () => (
               errors and improving accuracy.
             </li>
           </ul>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
 
     {/* research -------------------------------------------------------- */}
-    <motion.section
-      className="mb-16"
-      variants={fadeIn}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-        className="section-title"
-      >
-        Research
-      </motion.h2>
+    <section>
+      <h2>Research</h2>
 
-      <motion.div
-        className="max-w-3xl mx-auto space-y-8"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Incoming AI Research Fellow @{" "}
-            <span className="text-primary">Algoverse</span>
+      <div>
+        <div>
+          <h3>
+            AI Research Fellow @ <span>Algoverse</span>
           </h3>
-          <p className="text-primary mb-2">Incoming</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>June 2026 – Present</p>
+          <ul>
             <li>
-              Incoming LLM research cohort member. Conducting applied research
-              on large language models targeting NeurIPS publication.
+              Conducting LLM safety research on audit budget allocation under
+              adversarial conditions, targeting peer-reviewed publication.
+            </li>
+            <li>
+              Built the dataset normalization and monitor scoring pipeline
+              behind the team&apos;s analysis, deploying a self-hosted 27B model
+              on Azure A100s.
             </li>
           </ul>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold mb-2">
+        <div>
+          <h3>
             Undergraduate Research Assistant - Computer Vision @{" "}
-            <span className="text-primary">The University of Akron</span>
+            <span>The University of Akron</span>
           </h3>
-          <p className="text-primary mb-2">Jan 2026 - Present</p>
-          <ul className="text-[#8892b0] space-y-2 list-disc list-inside">
+          <p>January 2026 – Present</p>
+          <ul>
             <li>
-              Comparing CV architectures (YOLOv8, RT-DETR, EfficientDet) on
-              custom datasets using FLIR hardware.
+              Benchmarking YOLO, RT-DETR, and EfficientDet on custom thermal and
+              visual datasets captured with FLIR hardware.
             </li>
             <li>
-              Benchmarking models across precision, recall, and mAP50 to
-              identify tradeoffs and research findings.
-            </li>
-            <li>
-              Building preprocessing pipelines and experiments to improve
+              Building preprocessing and experiment pipelines to improve
               robustness on imbalanced real-world data.
             </li>
             <li>
-              Authoring findings as first author and targeting submission under
-              faculty supervision.
+              Authoring findings as first author under faculty supervision.
             </li>
           </ul>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
 
     {/* education -------------------------------------------------------- */}
-    <motion.section
-      className="mb-16"
-      variants={fadeIn}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-        className="section-title"
-      >
-        Education
-      </motion.h2>
+    <section>
+      <h2>Education</h2>
 
-      <motion.div
-        className="max-w-3xl mx-auto space-y-8"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHoverSmall}
-        >
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            The University of Akron
-          </h3>
-          <p className="text-[#8892b0] mb-1">
-            <span className="font-bold">
-              BBA in Information Systems | Minor: Computer Science
-            </span>
+      <div>
+        <div>
+          <h3>The University of Akron</h3>
+          <p>
+            <span>BBA in Information Systems | Minor: Computer Science</span>
           </p>
-          <p className="text-[#8892b0] mb-1 font-bold">
+          <p>
             Artificial Intelligence and Machine Learning – Undergraduate
             Certificate
           </p>
-          <p className="text-sm text-[#8892b0] mb-2">
-            Aug 2022 – Dec 2026 · Senior
-          </p>
-          <ul className="list-disc list-inside text-sm text-[#8892b0] space-y-1"></ul>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+          <p>August 2022 – December 2026 · Senior</p>
+          <ul></ul>
+        </div>
+      </div>
+    </section>
 
     {/* certificates ----------------------------------------------------- */}
-    <motion.section
-      className="mb-16"
-      variants={fadeIn}
-      initial="initial"
-      animate="animate"
-    >
-      <motion.h2
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-        className="section-title"
-      >
-        Certificates
-      </motion.h2>
+    <section>
+      <h2>Certificates</h2>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center"
-        variants={staggerContainer}
-        initial="initial"
-        animate="animate"
-      >
+      <div>
         {/* Completed */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Certificates - Completed
-          </h3>
-          <ul className="text-[#8892b0] space-y-2">
+        <div>
+          <h3>Certificates - Completed</h3>
+          <ul>
             {[
               {
                 name: "Introduction to AI with Python - Domestika",
@@ -568,31 +390,20 @@ const About = () => (
                 link: "https://www.linkedin.com/learning/certificates/e2fe91cd7f2e8a912a9a98088185fb7041df09479f56e40746ed28985f73e06c?u=79600362",
               },
             ].map((cert) => (
-              <li key={cert.name} className="flex items-center gap-2">
-                <FaAngleRight className="text-primary" />
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary cursor-pointer transition-colors"
-                >
+              <li key={cert.name}>
+                <FaAngleRight />
+                <a href={cert.link} target="_blank" rel="noopener noreferrer">
                   {cert.name}
                 </a>
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
         {/* In Progress */}
-        <motion.div
-          className="bg-white dark:bg-[#1c2841]/50 p-6 rounded-lg shadow-md"
-          variants={fadeInUp}
-          {...cardHover}
-        >
-          <h3 className="text-xl font-semibold mb-2">
-            Certificates - In Progress
-          </h3>
-          <ul className="text-[#8892b0] space-y-2">
+        <div>
+          <h3>Certificates - In Progress</h3>
+          <ul>
             {[
               {
                 name: "CS50X Introduction to Computer Science - edX",
@@ -603,23 +414,17 @@ const About = () => (
                 link: "https://www.deeplearning.ai/courses/machine-learning-specialization/",
               },
             ].map((cert) => (
-              <li key={cert.name} className="flex items-center gap-2">
-                <FaAngleRight className="text-primary" />
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary cursor-pointer transition-colors"
-                >
+              <li key={cert.name}>
+                <FaAngleRight />
+                <a href={cert.link} target="_blank" rel="noopener noreferrer">
                   {cert.name}
                 </a>
               </li>
             ))}
           </ul>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
   </div>
 );
-
 export default About;

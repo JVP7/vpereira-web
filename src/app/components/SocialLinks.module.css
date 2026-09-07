@@ -1,0 +1,25 @@
+.links {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--muted);
+}
+
+.link svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.link:hover { color: var(--ink); }
+
+:global(.intro-socials),
+:global(.footer-links) { align-items: center; }

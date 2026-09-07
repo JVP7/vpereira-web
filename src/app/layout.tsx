@@ -1,40 +1,13 @@
 import type { Metadata } from "next";
-import { NTR } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/Footer";
-
-const ntr = NTR({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-ntr",
-});
-
 export const metadata: Metadata = {
-  title: "vpereira™",
-  description: "My portfolio site",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  title: "John V. Pereira — vpereira",
+  description: "Projects, writing, and background from John V. Pereira. Learning by building in machine learning and software development.",
+  icons: { icon: "/favicon.ico" },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${ntr.variable} antialiased bg-white transition-colors dark:bg-gray-900 dark:text-slate-300`}
-      >
-        <ThemeProvider>
-          <Navbar />
-          <main className="min-h-screen pt-24">{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en" className="dark" suppressHydrationWarning><body><ThemeProvider><a className="skip-link" href="#main-content">Skip to content</a><Navbar /><main id="main-content" tabIndex={-1}>{children}</main><Footer /></ThemeProvider></body></html>;
 }
