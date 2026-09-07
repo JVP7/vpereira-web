@@ -41,7 +41,11 @@ const About = () => (
     {/* Resume Button ---------------------------------------------------- */}
     <div>
       <div>
-        <a href="/pereira-v-john-resume.pdf" download="pereira-v-john-resume.pdf" className="resume-link">
+        <a
+          href="/pereira-v-john-resume.pdf"
+          download="pereira-v-john-resume.pdf"
+          className="resume-link"
+        >
           Get My Resume
         </a>
       </div>
@@ -241,15 +245,15 @@ const About = () => (
           <p>August 2025 – December 2025</p>
           <ul>
             <li>
-              Provide daily IT support for 100+ faculty, staff, and students,
+              Provided daily IT support for 100+ faculty, staff, and students,
               resolving hardware, software, and network issues.
             </li>
             <li>
-              Maintain and troubleshoot A/V systems to ensure smooth delivery of
-              hybrid and in-person classes.
+              Maintained and troubleshoot A/V systems to ensure smooth delivery
+              of hybrid and in-person classes.
             </li>
             <li>
-              Configure and update Windows/macOS devices to keep the law
+              Configured and update Windows/macOS devices to keep the law
               school’s IT infrastructure reliable.
             </li>
           </ul>
