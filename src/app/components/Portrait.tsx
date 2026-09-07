@@ -14,7 +14,7 @@ export default function Portrait() {
       <PixelKnight />
     </div>
     <button type="button" className={`portrait-button ${showAlternate ? "is-swapped" : ""}`} onPointerEnter={event => { if (event.pointerType !== "touch" && window.matchMedia("(hover: hover)").matches) setHovered(true); }} onPointerLeave={() => setHovered(false)} onPointerCancel={() => setHovered(false)} onClick={() => setSwapped(value => !value)} aria-label="Toggle alternate portrait of John" aria-pressed={swapped}>
-    <Image src="/profile.avif" alt="John V. Pereira in a suit outdoors" width={320} height={360} priority className="portrait-primary" />
+    <Image src="/profile-main.jpg" alt="John V. Pereira in a suit outdoors" width={320} height={360} priority sizes="(max-width: 620px) 215px, 240px" className="portrait-primary" />
     <Image src="/profile-parrots.jpeg" alt="John V. Pereira with two parrots on his shoulders at the beach" width={320} height={360} priority sizes="(max-width: 620px) 215px, 240px" className="portrait-alternate" />
   </button><figcaption className={styles.caption}>
     <span className="hand-note">hover</span>
