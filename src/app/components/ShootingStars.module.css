@@ -1,0 +1,32 @@
+.home {
+  position: relative;
+}
+
+/* The mask protects the intro text; the open universe area stays available. */
+.sky {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: var(--accent);
+  contain: layout paint;
+}
+
+.flight {
+  opacity: 0;
+  animation: shoot linear both;
+}
+
+@keyframes shoot {
+  0% { opacity: 0; transform: translate(0, 0); }
+  12% { opacity: .85; }
+  65% { opacity: .7; }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky { display: none; }
+  .flight { animation: none; }
+}

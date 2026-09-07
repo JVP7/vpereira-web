@@ -1,0 +1,15 @@
+.caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+}
+
+.arrow {
+  display: block;
+  width: 52px;
+  height: 43px;
+  margin-top: -24px;
+  overflow: visible;
+}
