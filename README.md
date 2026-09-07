@@ -1,4 +1,6 @@
-<img src="public/knight-logo.svg" alt="John V. Pereira’s chess knight" width="64" />
+<p align="center">
+  <img src="public/knight-logo.svg" alt="John V. Pereira’s chess knight" width="64" />
+</p>
 
 # vpereira.com
 
