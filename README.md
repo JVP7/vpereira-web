@@ -1,30 +1,44 @@
-# 🧠 vpereira™ — Portfolio by John V. Pereira
+<img src="public/knight-logo.svg" alt="John V. Pereira’s chess knight" width="64" />
 
-Welcome to my personal portfolio — a place where I share my work, thoughts, and journey in building software, exploring AI/ML, and solving real-world problems with code.
+# vpereira.com
 
-<div align="center">
-  <img src="public/favicon.ico" alt="vpereira logo" width="100" />
-</div>
+My personal website, with projects, writing, and a little about me. I built the original by hand and keep updating it as my work changes.
 
-## 🚀 Live Site
-🌐 [vpereira.com](https://vpereira.com/)
+[Visit the site](https://vpereira.com)
 
-## 📂 Tech Stack
+## Development
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Styling**: Tailwind CSS, ShadCN/UI
-- **Animation**: Framer Motion
-- **Email**: Resend + Vercel Edge Functions
-- **Deployment**: [Vercel](https://vercel.com)
-- **Domain**: Custom via Cloudflare
+Built with Next.js, React, TypeScript, and Tailwind CSS. The contact form uses Resend.
 
-## 📬 Features
+```bash
+npm ci
+```
 
-- Smooth dark/light mode
-- Contact form powered by Resend
-- Blog section with Markdown support
-- Fully responsive, mobile-friendly layout
-- Animated sections with Framer Motion
-- SEO-friendly metadata
+For the contact form, add your Resend key to `.env.local`:
 
-— John V. Pereira
+```dotenv
+RESEND_API_KEY=your_resend_api_key
+```
+
+```bash
+npm run dev
+```
+
+Open [localhost:3000](http://localhost:3000).
+
+## Editing
+
+- `src/app/about/page.tsx` — bio, experience, research, and education.
+- `src/contents/project.ts` — project details.
+- `src/contents/blogs.ts` — writing links and excerpts.
+- `src/app/components/` — navigation, page sections, and interactions.
+- `public/` — photos, logos, and the résumé PDF.
+
+## Checks
+
+```bash
+npx eslint src
+npm run build
+```
+
+Hosted on Vercel through this repository’s GitHub integration.
