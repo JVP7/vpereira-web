@@ -267,16 +267,17 @@ const About = () => (
           <p>May 2025 – August 2025</p>
           <ul>
             <li>
-              Designed and deployed Freshdesk automations and workflows, cutting
-              manual workload and response times.
+              Built a NetSuite calendar in JavaScript that let installers
+              reschedule jobs by dragging on a tablet, replacing a four-step
+              office lookup and edit across 1,000+ purchase orders.
             </li>
             <li>
-              Built a custom NetSuite calendar app in JavaScript to improve
-              purchase order visibility and tracking.
+              Designed and deployed Freshdesk automations and workflows, cutting
+              manual ticket handling and response times.
             </li>
             <li>
               Resolved 100+ tickets/month and repaired 10+ machines weekly,
-              reducing downtime for 250+ employees.
+              supporting 250+ employees across hardware and software.
             </li>
           </ul>
         </div>
